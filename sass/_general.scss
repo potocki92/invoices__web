@@ -29,17 +29,33 @@ span {
 ============================================= */
 body {
   font-family: "Encode Sans Condensed", sans-serif;
-  color: #f1f1f1;
+  background-color: #eee;
 }
 
 /* LI
 ============================================= */
 .item {
-    list-style: none;
+  list-style: none;
 }
 
 /* A HREF
 ============================================= */
 .link {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.title {
+  padding-bottom: 20px;
+  color: #212121;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
 }

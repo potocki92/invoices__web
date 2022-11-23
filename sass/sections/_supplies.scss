@@ -1,0 +1,109 @@
+/*
+=====================================================
+            SUPPLIES SECTION
+=====================================================
+*/
+
+/* main supplies section */
+.section {
+  border-top: 1px solid #212121;
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    border-top: 1px solid #212121;
+  }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  &__button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .wrapper:last-child {
+    height: 40px;
+    gap: 30px;
+    align-items: center;
+  }
+}
+.checkbox__box {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+/* positioning first wrapper__text to left (DESCRIPTION)*/
+.section__container:first-child {
+  .wrapper:first-of-type {
+    .wrapper__text--absolute {
+      left: 0;
+    }
+  }
+}
+
+/* positioning last section container */
+.section__container:last-child {
+  display: flex;
+  justify-content: right;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+  &__text--absolute {
+    position: absolute;
+    top: -40px;
+    right: 0;
+  }
+  &__input {
+    &--description {
+      height: 40px;
+      width: 300px;
+    }
+    &[type="text"] {
+      padding: 12px 10px;
+    }
+    &--rate,
+    &--qty {
+      height: 40px;
+      width: 150px;
+      &::placeholder {
+        text-align: right;
+      }
+    }
+  }
+  &__label {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__area {
+    height: 100px;
+    resize: none;
+    &[type="text"] {
+      padding: 12px 10px;
+    }
+  }
+  &__checkbox {
+    height: 20px;
+    width: 20px;
+  }
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+}
