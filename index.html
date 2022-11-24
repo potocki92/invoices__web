@@ -48,193 +48,133 @@
     <!-- CONTAINER (MIN-WIDTH)-->
 
     <!-- start invoices section -->
-    <div class="page container">
+    <div class="page">
       <!-- start buttons list -->
-      <div class="buttons">
-        <button class="button">Preview</button>
-        <button class="button">Edit</button>
+      <div class="page__buttons">
+        <button class="page__button button">Preview</button>
+        <button class="page__button button">Edit</button>
       </div>
 
-      <!-- <section class="invoices">
-        <!-- START SECTION WITH INVOICES NAME AND LOGO -->
-        <div class="invoices__section">
-          <div class="wrapper">
-            <form class="form">
-              <input class="form__input input" placeholder="Invoice" />
+      <div class="invoices">
+        <!--START SECTION WITH INVOICES NAME AND LOGO -->
+        <section class="invoices__section">
+          <div class="section--logo">
+            <form class="section__form">
+              <input class="section__input input" placeholder="Invoice" />
             </form>
-            <div class="wrapper__logo">Logo</div>
+            <div class="section__logo">Logo</div>
           </div>
-        </div>
+        </section>
         <!-- START SECTION WITH "FROM/TO" FORMS -->
 
-        <div class="invoices__section">
-          <div class="wrapper">
-            <!-- START USER FORMS -->
-            <div class="wrapper__from wrapper__box">
-              <span class="wrapper__text">From</span>
-              <form action="" class="form">
-                <ul class="form__list list">
-                  <li class="form__item item">
-                    <span class="item__text">Name</span>
-                    <input
-                      type="text"
-                      class="form__input input"
-                      placeholder="Business Name"
-                    />
-                  </li>
-                  <li class="form__item item">
-                    <span class="item__text">Email</span>
-                    <input
-                      type="text"
-                      class="form__input input"
-                      placeholder="name@@business.com"
-                    />
-                  </li>
-
-                  <li class="form__item item">
-                    <span class="item__text">Address</span>
-                    <input
-                      type="text"
-                      class="form__input input"
-                      placeholder="Street"
-                    />
-                  </li>
-
-                  <li class="form__item item">
-                    <span class="item__text">Phone</span>
-                    <input
-                      type="text"
-                      class="form__input input"
-                      placeholder="(123) 456 789"
-                    />
-                  </li>
-
-                  <li class="form__item item">
-                    <span class="item__text">Business Number</span>
-                    <input
-                      type="text"
-                      class="form__input input"
-                      placeholder="E.g. 123-45-6789"
-                    />
-                  </li>
-                </ul>
-              </form>
-            </div>
-            <!-- END USER FORMS -->
-
-            <!-- START CUSTOMER FORMS -->
-            <div class="wrapper__to wrapper__box">
-              <span class="wrapper__text">To</span>
-              <form class="form" action="">
-                <ul class="form__list list">
-                  <li class="form__item item">
-                    <span class="item__text">Name</span>
-                    <input
-                      type="text"
-                      class="form__input input"
-                      placeholder="Cient Name"
-                    />
-                  </li>
-                  <li class="form__item item">
-                    <span class="item__text">Email</span>
-                    <input
-                      type="text"
-                      class="form__input input"
-                      placeholder="name@client.com"
-                    />
-                  </li>
-
-                  <li class="form__item item">
-                    <span class="item__text">Address</span>
-                    <input
-                      type="text"
-                      class="form__input input"
-                      placeholder="Street"
-                    />
-                  </li>
-
-                  <li class="form__item item">
-                    <span class="item__text">Phone</span>
-                    <input
-                      type="text"
-                      class="form__input input"
-                      placeholder="(123) 456 789"
-                    />
-                  </li>
-                </ul>
-              </form>
-            </div>
-            <!-- END CUSTOMER FORMS -->
+        <section class="invoices__section">
+          <div class="section">
+            <span class="section__text">FROM</span>
+            <form class="section__form">
+              <ul class="section__list list">
+                <li class="section__item item">
+                  <span class="section__text">Name</span>
+                  <input class="section__input" placeholder="Business Name" />
+                </li>
+                <li class="section__item item">
+                  <span class="section__text">Email</span>
+                  <input
+                    class="section__input"
+                    placeholder="name@business.com"
+                  />
+                </li>
+                <li class="section__item item">
+                  <span class="section__text">Address</span>
+                  <input class="section__input" placeholder="Street" />
+                </li>
+                <li class="section__item item">
+                  <span class="section__text">Phone</span>
+                  <input class="section__input" placeholder="(123) 456 789" />
+                </li>
+                <li class="section__item item">
+                  <span class="section__text">Business Number</span>
+                  <input
+                    class="section__input"
+                    placeholder="E.g. 123-45-6789"
+                  />
+                </li>
+              </ul>
+            </form>
           </div>
-        </div>
-
-        <!-- STAR SECTION WITH INVOICES INFORMATIONS 
-          (NUMBER OF INVOICE, DATE ETC.)
-        -->
-        <div class="wrapper invoices__section">
-          <span class="section__line"></span>
-          <form class="form" action="">
-            <ul class="form__list list">
-              <li class="form__item item">
-                <span class="item__text">Number</span>
-                <input
-                  type="text"
-                  class="form__input input"
-                  placeholder="INV0002"
-                />
-              </li>
-              <li class="form__item item">
-                <span class="item__text">Date</span>
-                <input
-                  type="text"
-                  class="form__input input"
-                  placeholder="NOV 19, 2022"
-                />
-              </li>
-
-              <li class="form__item item">
-                <span class="item__text">Terms</span>
-                <input
-                  type="text"
-                  class="form__input input"
-                  placeholder="Due On Receipt"
-                />
-              </li>
-            </ul>
-          </form>
-        </div> -->
-
+          <div class="section">
+            <span class="section__text">TO</span>
+            <form class="section__form">
+              <ul class="section__list list">
+                <li class="section__item item">
+                  <span class="section__text">Name</span>
+                  <input class="section__input" placeholder="Client Name" />
+                </li>
+                <li class="section__item item">
+                  <span class="section__text">Email</span>
+                  <input class="section__input" placeholder="name@client.com" />
+                </li>
+                <li class="section__item item">
+                  <span class="section__text">Address</span>
+                  <input class="section__input" placeholder="Street" />
+                </li>
+                <li class="section__item item">
+                  <span class="section__text">Phone</span>
+                  <input class="section__input" placeholder="(123) 456 789" />
+                </li>
+              </ul>
+            </form>
+          </div>
+          <div class="section">
+            <form class="section__form">
+              <ul class="section__list list">
+                <li class="section__item item">
+                  <span class="section__text">Number</span>
+                  <input class="section__input" placeholder="INV0002" />
+                </li>
+                <li class="section__item item">
+                  <span class="section__text">Date</span>
+                  <input class="section__input" placeholder="NOV 19, 2022" />
+                </li>
+                <li class="section__item item">
+                  <span class="section__text">Terms</span>
+                  <input class="section__input" placeholder="Due On Receipt" />
+                </li>
+              </ul>
+            </form>
+          </div>
+        </section>
         <!-- START SECTION WITH SUPPLIES -->
-        <div class="section">
-          <div class="section__container">
-            <button class="section__button"></button>
-            <div class="wrapper">
-              <span class="wrapper__text--absolute">DESCRIPTION</span>
-              <form class="wrapper__form">
+
+        <section class="invoices__section">
+          <div class="section--supplies description">
+            <button class="description__button"></button>
+            <div class="supplies__container">
+              <span class="description__text supplies__text">DESCRIPTION</span>
+              <form class="description__form supplies__form">
                 <input
                   type="text"
-                  class="wrapper__input wrapper__input--description"
+                  class="description__input"
                   placeholder="Item Description"
                 />
                 <textarea
                   type="text"
-                  class="wrapper__area"
+                  class="description__area"
                   placeholder="Additional details"
                 ></textarea>
               </form>
             </div>
-            <div class="wrapper">
-              <span class="wrapper__text--absolute">RATE</span>
+            <div class="supplies__container">
+              <span class="rate__text supplies__text">RATE</span>
               <input
                 type="text"
-                class="wrapper__input wrapper__input--rate"
+                class="rate__input"
                 placeholder="0.00"
               />
             </div>
           </div>
 
-          <div class="section__container">
-            <div class="wrapper">
+          <div class="section">
+            <div class="section__qty">
               <span class="wrapper__text--absolute">QTY</span>
               <input
                 type="text"
@@ -244,8 +184,8 @@
             </div>
           </div>
 
-          <div class="section__container">
-            <div class="wrapper">
+          <div class="section">
+            <div class="section__amount">
               <div class="wrapper__box">
                 <span class="wrapper__text--absolute">AMOUNT</span>
                 <label class="wrapper__label wrapper__input--qty">0.00</label>
@@ -259,8 +199,8 @@
             </div>
             <!-- <div class="wrapper"></div> -->
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <!-- end main invoice forms -->
     </div>
     <!-- end invoices section -->

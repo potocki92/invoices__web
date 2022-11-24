@@ -12,23 +12,12 @@
 @import "general";
 /* IMPORT UTILTS 
 ============================================= */
-@import "utils/variables";
-@import "utils/mixin";
+
 
 /* IMPORT COMPONENTS
 ============================================= */
-@import "components/buttons";
-@import "components/form";
-@import "components/input";
-@import "components/wrapper";
-@import "components/item";
+@import "components/header";
 
 /* IMPORT SECTIONS
 ============================================= */
-@import "sections/header";
-@import "sections/customer";
-@import "sections/invoices";
-@import "sections/user";
-@import "sections/container";
 @import "sections/section";
-@import "sections/supplies";

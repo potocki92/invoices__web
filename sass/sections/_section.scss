@@ -1,0 +1,78 @@
+@mixin paddingPage() {
+  padding: 40px;
+}
+
+/* main page with buttons and all sections with forms */
+.page {
+  width: 1000px;
+  background-color: aliceblue;
+  margin: 0 auto;
+  &__buttons {
+    @include paddingPage();
+  }
+}
+
+/* container with forms */
+.invoices {
+  display: flex;
+  flex-direction: column;
+  @include paddingPage();
+  border-top: 1px solid;
+
+  &__section {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
+
+/* all sections from invoices */
+.section {
+  width: 400px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  /* first sections from invoices */
+  /* with logo and invoices input */
+  &--logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__text {
+    width: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__input {
+    height: 40px;
+    width: 250px;
+  }
+  &--supplies {
+    display: flex;
+    background-color: red;
+  }
+}
+.supplies__container {
+  display: flex;
+  flex-direction: column;
+
+  .supplies__form {
+    display: flex;
+    flex-direction: column;
+  }
+}
