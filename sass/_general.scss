@@ -29,28 +29,22 @@ span {
 ============================================= */
 body {
   font-family: "Encode Sans Condensed", sans-serif;
-  background-color: #eee;
 }
 
 /* LI
 ============================================= */
-.item {
+li {
   list-style: none;
 }
 
 /* A HREF
 ============================================= */
-.link {
-  text-decoration: none;
-}
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+/* SMOOTH SCROLL
+============================================= */
 
-.title {
-  padding-bottom: 20px;
-  color: #212121;
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }

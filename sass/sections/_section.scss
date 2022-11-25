@@ -1,78 +1,75 @@
-@mixin paddingPage() {
-  padding: 40px;
+@mixin flex__column() {
+  display: flex;
+  flex-direction: column;
 }
 
-/* main page with buttons and all sections with forms */
 .page {
-  width: 1000px;
-  background-color: aliceblue;
-  margin: 0 auto;
-  &__buttons {
-    @include paddingPage();
-  }
-}
+  @include flex__column();
 
-/* container with forms */
-.invoices {
-  display: flex;
-  flex-direction: column;
-  @include paddingPage();
-  border-top: 1px solid;
-
-  &__section {
-    padding: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-  }
-}
-
-/* all sections from invoices */
-.section {
-  width: 400px;
-  display: flex;
   gap: 20px;
-  flex-direction: column;
-  /* first sections from invoices */
-  /* with logo and invoices input */
-  &--logo {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
+}
 
+/*
+  Buttons page
+=============================*/
+.buttons {
+  position: fixed;
+  height: 35px;
+}
+.buttons__list {
+  display: flex;
+}
+
+.invoices {
+  /* 100vh - height from header */
+  // height: calc(100vh - 50px);
+  
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+/*
+  Class section from invoices
+=============================*/
+
+.section {
+  padding: 50px 0; 
+  @include flex__column();
+  height: calc(100vh - 50px);
+  width: 100%;
+  gap: 20px;
+}
+.form {
   &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    @include flex__column();
+    gap: 15px;
   }
 
-  &__text {
-    width: 50px;
-    display: flex;
-    flex-wrap: wrap;
-  }
   &__item {
-    display: flex;
-    gap: 20px;
-  }
-
-  &__input {
-    height: 40px;
-    width: 250px;
-  }
-  &--supplies {
-    display: flex;
-    background-color: red;
+    @include flex__column();
+    gap: 5px;
   }
 }
-.supplies__container {
-  display: flex;
-  flex-direction: column;
 
-  .supplies__form {
-    display: flex;
-    flex-direction: column;
+/*
+  Inputs
+=============================*/
+.form__input {
+  height: 35px;
+}
+
+/*
+  Buttons
+=============================*/
+.button {
+  width: 80px;
+  height: 35px;
+  border: 1px solid gray;
+  
+  &--first {
+    border-radius: 5px 0 0 5px ;
+  }
+  &--second {
+    border-radius: 0 5px 5px 0 ;
   }
 }
