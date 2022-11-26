@@ -1,0 +1,17 @@
+.form {
+  @include flex__column();
+  gap: 20px;
+  &__input {
+    height: 40px;
+    width: 350px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    &--rate {
+      width: 170px;
+    }
+  }
+  &__area {
+    height: 120px;
+    resize: none;
+  }
+}

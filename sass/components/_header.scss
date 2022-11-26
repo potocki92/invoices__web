@@ -1,14 +1,22 @@
 .header {
   /* main header container 
   ============================*/
+  position: sticky;
   display: flex;
   padding: 15px;
   align-items: center;
   height: 50px;
+  border: 1px solid #ececec;
   &__logo {
     /* logo
     ============================*/
+    color: #212121;
     font-size: 2.2em;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
   }
   &__navigation {
     /* navigation

@@ -46,10 +46,9 @@
               </li>
             </ul>
           </div>
-
-          <div class="scroller">
+          <div class="container wrapper">
             <section class="section section--from">
-              <h2 clss="section__heading">From</h2>
+              <h2 class="section__heading">From</h2>
               <!-- form container -->
               <form class="form">
                 <ul class="form__list list">
@@ -81,7 +80,7 @@
             </section>
 
             <section class="section section--to">
-              <h2 clss="section__heading">TO</h2>
+              <h2 class="section__heading">TO</h2>
               <!-- form container -->
               <form class="form">
                 <ul class="form__list list">
@@ -105,26 +104,71 @@
               </form>
             </section>
 
-            <section class="section section--to">
-              <h2 clss="section__heading">TO</h2>
+            <section class="section section--info">
+              <h2 class="section__heading">Invoices Information</h2>
               <!-- form container -->
               <form class="form">
                 <ul class="form__list list">
                   <li class="form__item item">
-                    <span class="form__text">Name</span>
-                    <input class="form__input" placeholder="Business Name" />
+                    <span class="form__text">Number</span>
+                    <input class="form__input" placeholder="INV0002" />
                   </li>
                   <li class="form__item item">
-                    <span class="form__text">Email</span>
-                    <input class="form__input" placeholder="name@client.com" />
+                    <span class="form__text">Date</span>
+                    <input class="form__input" placeholder="Nov 19, 2022" />
                   </li>
                   <li class="form__item item">
-                    <span class="form__text">Address</span>
-                    <input class="form__input" placeholder="Street" />
+                    <span class="form__text">Terms</span>
+                    <input class="form__input" placeholder="Due On Receipt" />
+                  </li>
+                </ul>
+              </form>
+            </section>
+
+            <section class="section section--info">
+              <h2 class="section__heading">Supplies</h2>
+              <!-- form container -->
+              <form class="form">
+                <ul class="form__list list">
+                  <li class="form__item item">
+                    <span class="form__text">Description</span>
+                    <input class="form__input" placeholder="Item Description" />
                   </li>
                   <li class="form__item item">
-                    <span class="form__text">Phone</span>
-                    <input class="form__input" placeholder="(123) 456 789" />
+                    <textarea
+                      class="form__input form__area"
+                      placeholder="Additional details"
+                    ></textarea>
+                  </li>
+                </ul>
+
+                <ul class="form__list form__list--rate list">
+                  <li class="form__item form__item--rate item">
+                    <span class="form__text">Rate</span>
+                    <input
+                      class="form__input form__input--rate"
+                      placeholder="0.00"
+                    />
+                  </li>
+                  <li class="form__item form__item--rate item">
+                    <span class="form__text">Qty</span>
+                    <input
+                      class="form__input form__input--rate"
+                      placeholder="1"
+                    />
+                  </li>
+                  <li class="form__item form__item--rate item">
+                    <span class="form__text">Amount</span>
+                    <input
+                      class="form__input form__input--rate"
+                      placeholder="0.00"
+                    />
+                  </li>
+                  <li
+                    class="form__item form__item--rate item section__checkbox"
+                  >
+                    <span class="form__text">Tax</span>
+                    <input type="checkbox" />
                   </li>
                 </ul>
               </form>

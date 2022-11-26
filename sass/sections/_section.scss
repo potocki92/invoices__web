@@ -1,75 +1,73 @@
-@mixin flex__column() {
-  display: flex;
-  flex-direction: column;
-}
-
 .page {
   @include flex__column();
-
   gap: 20px;
+  padding: 15px;
 }
-
+/*
+  Invoices container
+=============================*/
+.invoices {
+  @include flex__column();
+  gap: 25px;
+}
 /*
   Buttons page
 =============================*/
 .buttons {
-  position: fixed;
-  height: 35px;
-}
-.buttons__list {
-  display: flex;
-}
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  .button {
+    width: 145px;
+    height: 38px;
+    background: #f5f4fa;
+    border: 1px solid #212121;
 
-.invoices {
-  /* 100vh - height from header */
-  // height: calc(100vh - 50px);
-  
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-/*
-  Class section from invoices
-=============================*/
+    /* text */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 162%;
+    /* identical to box height, or 162% */
 
+    text-align: center;
+    letter-spacing: 0.03em;
+    &--first {
+      border-radius: 4px 0 0 4px;
+    }
+    &--second {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
+.wrapper {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .section {
-  padding: 50px 0; 
   @include flex__column();
-  height: calc(100vh - 50px);
-  width: 100%;
   gap: 20px;
+  padding: 0 15px;
+}
+.container {
+  @include flex__column();
+  gap: 40px;
 }
 .form {
   &__list {
     @include flex__column();
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
   }
-
   &__item {
     @include flex__column();
     gap: 5px;
-  }
-}
-
-/*
-  Inputs
-=============================*/
-.form__input {
-  height: 35px;
-}
-
-/*
-  Buttons
-=============================*/
-.button {
-  width: 80px;
-  height: 35px;
-  border: 1px solid gray;
-  
-  &--first {
-    border-radius: 5px 0 0 5px ;
-  }
-  &--second {
-    border-radius: 0 5px 5px 0 ;
+    &--rate {
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 10px;
+    }
   }
 }
