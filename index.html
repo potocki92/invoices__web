@@ -39,10 +39,13 @@
           <div class="buttons">
             <ul class="buttons__list list">
               <li class="buttons__item item">
-                <button class="button button--first">Preview</button>
-              </li>
-              <li class="buttons__item item">
-                <button class="button button--second">Edit</button>
+                <button
+                  class="button button"
+                  type="button"
+                  data-preview-open
+                >
+                  Preview
+                </button>
               </li>
             </ul>
           </div>
@@ -177,17 +180,22 @@
         </div>
       </div>
 
-      <div class="A4">
+      <div class="A4 is-hidden" data-preview>
         <section class="A4__section">
           <!-- START HEADING INVOICES -->
           <div class="A4__wrapper">
-            <span class="A4__text">Wystawiono dnia: xxx-xx-xx, miasto</span>
-            <table class="A4__table">
-              <th colspan="2" class="table__header">
-                <h2 class="table__title table table--left">
-                  Faktura nr FV x/xx/xxxx
-                </h2>
-              </th>
+            <table class="A4__table table">
+              <tr class="table__row">
+                <th colspan="2" class="table__header">
+                  <h2 class="table__title table--left">
+                    Faktura nr FV x/xx/xxxx
+                  </h2>
+                </th>
+              </tr>
+              <tr class="table__row">
+                <td class="table__data">Data wystawienia:</td>
+                <td class="table__data">RRRR/MM/DD</td>
+              </tr>
               <tr class="table__row">
                 <td class="table__data">Data sprzedaży:</td>
                 <td class="table__data">RRRR/MM/DD</td>
@@ -206,9 +214,9 @@
           <!-- START CUSTOMER -->
           <div class="A4__wrapper">
             <div class="from">
-              <table class="A4__table">
+              <table class="A4__table table table__seller">
                 <th class="table__header">
-                  <h2 class="table__title table table--left">Sprzedawca:</h2>
+                  <h2 class="table__title table--left">Sprzedawca:</h2>
                 </th>
                 <tr class="table__row">
                   <td class="table__data">Firma ABC</td>
@@ -225,12 +233,18 @@
                 <tr class="table__row">
                   <td class="table__data">faktury@sprzedawca.pl</td>
                 </tr>
+                <tr class="table__row">
+                  <td class="table__data">Bank</td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__data">24 1140 1977 0000 5921 7200 1001</td>
+                </tr>
               </table>
             </div>
             <div class="to">
-              <table class="A4__table">
+              <table class="A4__table table table__buyer">
                 <th class="table__header">
-                  <h2 class="table__title table table--left">Nabywca:</h2>
+                  <h2 class="table__title table--left">Nabywca:</h2>
                 </th>
                 <tr class="table__row">
                   <td class="table__data">Produkcja Sp. z o.o.</td>
@@ -248,9 +262,9 @@
                   <td class="table__data">faktury@nabywca.pl</td>
                 </tr>
               </table>
-              <table class="A4__table">
+              <table class="A4__table table table__recipient">
                 <th class="table__header">
-                  <h2 class="table__title table table--left">Odbiorca:</h2>
+                  <h2 class="table__title table--left">Odbiorca:</h2>
                 </th>
                 <tr class="table__row">
                   <td class="table__data">Odbiorca Sp. z o.o.</td>
@@ -273,100 +287,131 @@
           <!-- END CUSTOMER -->
           <!-- START SUPPLIES -->
           <div class="A4__wrapper">
-            <table class="A4__table--bigger">
-              <th colspan="7" class="table__header">
-                <h3 class="table__title table table--left">POZYCJE FAKTURY</h3>
-              </th>
-              <tr class="table__row">
-                <td class="table__data table table--center">LP</td>
-                <td class="table__data">Nazwa towaru/usługi</td>
-                <td class="table__data">Ilość</td>
-                <td class="table__data table table--right">Cena Netto</td>
-                <td class="table__data">VAT</td>
-                <td class="table__data">Wartość VAT</td>
-                <td class="table__data">Wartość brutto</td>
+            <table class="A4__table--bigger table table__supplies">
+              <tr class="table__row table__supplies__row">
+                <th
+                  class="table__supplies__header table--center table__supplies__id border"
+                >
+                  LP
+                </th>
+                <th
+                  class="table__supplies__header border table__supplies__name"
+                >
+                  Nazwa towaru/usługi
+                </th>
+                <th
+                  class="table__supplies__header table--center border table__supplies__qty"
+                >
+                  Ilość
+                </th>
+                <th
+                  class="table__supplies__header table--right table__supplies__net__amount border"
+                >
+                  Cena Netto
+                </th>
+                <th
+                  class="table__supplies__header table--right table__supplies__net__amount border"
+                >
+                  Wartość Netto
+                </th>
+                <th
+                  class="table__supplies__header table--center table__supplies__vat border"
+                >
+                  VAT
+                </th>
+                <th
+                  class="table__supplies__header table--right table__supplies__vat__amount border"
+                >
+                  Wartość VAT
+                </th>
+                <th
+                  class="table__supplies__header table--right table__supplies__gross__amount border"
+                >
+                  Wartość brutto
+                </th>
               </tr>
-              <tr class="table__row">
-                <td class="table__data table table--right">1</td>
-                <td class="table__data table table--left">Oprogramowanie</td>
-                <td class="table__data table table--center">1 szt</td>
-                <td class="table__data table table--right">16200.00</td>
-                <td class="table__data table table--right">23</td>
-                <td class="table__data table table--right">2980.80</td>
-                <td class="table__data table table--right">15940.80</td>
+              <tr class="table__row table__supplies__row">
+                <td
+                  class="table__data table__supplies__data table--right table__supplies__number"
+                >
+                  1
+                </td>
+                <td class="table__data table__supplies__data table--left">
+                  Oprogramowanie
+                </td>
+                <td class="table__data table__supplies__data table--center">
+                  1 szt
+                </td>
+                <td class="table__data table__supplies__data table--right">
+                  16200.00
+                </td>
+                <td class="table__data table__supplies__data table--right">
+                  16200.00
+                </td>
+                <td class="table__data table__supplies__data table--right">
+                  23
+                </td>
+                <td class="table__data table__supplies__data table--right">
+                  2980.80
+                </td>
+                <td class="table__data table__supplies__data table--right">
+                  15940.80
+                </td>
+              </tr>
+              <tr class="table__row table__supplies__row">
+                <td colspan="3" class="table__data"></td>
+                <td class="table__data table__supplies__data table--right">
+                  Razem
+                </td>
+                <td class="table__data table__supplies__data table--right">
+                  16200.00
+                </td>
+                <td class="table__data table__supplies__data table--right"></td>
+                <td class="table__data table__supplies__data table--right">
+                  2980.80
+                </td>
+                <td class="table__data table__supplies__data table--right">
+                  15940.80
+                </td>
+              </tr>
+              <tr class="table__row table__supplies__row">
+                <td colspan="3" class="table__data"></td>
+                <td class="table__data table__supplies__data table--right">
+                  W tym
+                </td>
+                <td class="table__data table__supplies__data table--right">
+                  16200.00
+                </td>
+                <td class="table__data table__supplies__data table--right">
+                  23
+                </td>
+                <td class="table__data table__supplies__data table--right">
+                  2980.80
+                </td>
+                <td class="table__data table__supplies__data table--right">
+                  15940.80
+                </td>
               </tr>
             </table>
           </div>
           <!-- END SUPPLIES -->
           <!-- START SUMMARY -->
-          <div class="A4__wrapper">
-            <table class="A4__table--bigger">
-              <th colspan="7" class="table__header">
-                <h3 class="table__title table table--left">PODSUMOWANIE</h3>
-              </th>
-              <tr class="table__row">
-                <td colspan="2" class="table__data table table--right">
-                  Wartość netto
-                </td>
-                <td class="table__data table table--right">Stawka VAT</td>
-                <td class="table__data table table--right">VAT</td>
-                <td class="table__data table table--right">Wartość brutto</td>
-              </tr>
-              <tr class="table__row">
-                <td colspan="2" class="table__data table table--right">12970.00</td>
-                <td class="table__data table table--right">23%</td>
-                <td class="table__data table table--right">2983.10</td>
-                <td class="table__data table table--right">15953.10</td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__data table table--right">Razem:</td>
-                <td class="table__data table table--right">12970.00 PLN</td>
-                <td colspan="2" class="table__data table table--right">2983.10 PLN</td>
-                <td class="table__data table table--right">15953.10 PLN</td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__data table table--right">Zapłacono:</td>
-                <td colspan="4" class="table__data table table--right">0.00 PLN</td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__data table table--right">Pozostało do zapłaty:</td>
-                <td colspan="4" class="table__data table table--right">15953.10 PLN</td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__data table table--right">Słownie:</td>
-                <td colspan="4" class="table__data table table--right">
-                  piętnaście tysięcy dziewiędziesiąt trzy i 0.10 PLN
-                </td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__data table table--right">Konto bankowe:</td>
-                <td colspan="4" class="table__data table table--right">
-                  28 1020 1127 0123 9935 6177 2034
-                </td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__data table table--right">Uwagi:</td>
-                <td colspan="4" class="table__data table table--right">
-                  Proszę o terminową wpłatę
-                </td>
-              </tr>
-            </table>
-          </div>
+          <div class="A4__wrapper"></div>
           <!-- END SUMMARY -->
           <!-- START SIGNS -->
           <div class="A4__wrapper">
-            <table class="A4__table--bigger">
-              <tr class="table__row">
-                <td class="table__data table table--center">
+            <table class="A4__table--bigger table table__signs">
+              <tr class="table__row table__signs__row">
+                <td class="table__data table--center">
                   Osoba upoważniona do wystawienia faktury VAT
                 </td>
-                <td class="table__data table table--center">
+                <td class="table__data table--center">
                   Osoba upoważniona do Otrzymania faktury VAT
                 </td>
               </tr>
-              <tr class="table__row">
-                <td class="table__data table table--center">Jan Kowalski</td>
-                <td class="table__data table table--center">Krzysztof Nowak</td>
+              <tr class="table__row table__signs__row">
+                <td class="table__data table--center">Jan Kowalski</td>
+                <td class="table__data table--center">Krzysztof Nowak</td>
               </tr>
             </table>
           </div>
@@ -374,5 +419,7 @@
         </section>
       </div>
     </main>
+
+    <script src="./js/is-hidden.js"></script>
   </body>
 </html>

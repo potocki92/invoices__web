@@ -19,10 +19,15 @@
     justify-content: center;
   }
   .button {
-    width: 145px;
+    z-index: 1;
+    width: 100px;
     height: 38px;
     background: #f5f4fa;
-    border: 1px solid #212121;
+    border-style: none;
+    border-radius: 3px;
+
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
     /* text */
     font-style: normal;
     font-weight: 500;
@@ -32,12 +37,10 @@
 
     text-align: center;
     letter-spacing: 0.03em;
-    &--first {
-      border-radius: 4px 0 0 4px;
-    }
-    &--second {
-      border-radius: 0 4px 4px 0;
-    }
+
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
   }
 }
 .wrapper {

@@ -1,14 +1,3 @@
-.A4__table {
-  width: 250px;
-  &--bigger {
-    width: 100%;
-  }
-}
-.table__header,
-.table__data {
-  border: 1px solid black;
-}
-
 .A4 {
   width: 100%;
   height: 100%;
@@ -18,42 +7,85 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.A4__section {
-  position: inherit;
-  height: 297mm;
-  width: 210mm;
-  transform: scale(0.5);
-  background-color: white;
 
-  padding: 0.5in;
-  margin-bottom: 0.5cm;
-  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  &__section {
+    position: inherit;
+    height: 297mm;
+    width: 210mm;
+    transform: scale(0.5);
+    background-color: white;
+
+    padding: 0.5in;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__table {
+    width: 250px;
+    &--bigger {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  }
 }
 
+.to {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .A4__wrapper {
   display: flex;
   justify-content: space-between;
+  &:first-child {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+  }
+  &:last-child {
+    margin-bottom: auto;
+    margin-top: auto;
+  }
 }
 
-.wrapper__text {
-  display: flex;
-  gap: 15px;
-}
 .page__invoices {
   display: flex;
   flex-direction: column;
 }
 
 .table {
-    
-    &--left {
-        text-align:left;
+  &--left {
+    text-align: left;
+  }
+  &--right {
+    text-align: right;
+  }
+  &--center {
+    text-align: center;
+  }
+
+  &__header {
+    padding-bottom: 10px;
+  }
+  &__supplies {
+    &__header {
+      padding: 10px 5px;
+      background-color: #f2f2f2;
+
+      border: 1px solid #F1F1F1;
     }
-    &--right {
-        text-align:right;
+    &__data {
+      padding: 5px;
+
+      border: 1px solid #F0F0F0;
     }
-    &--center {
-        text-align: center;
+  }
+  &__summary {
+    &__row:nth-child(even) {
+      background-color: #f2f2f2;
     }
+  }
 }
