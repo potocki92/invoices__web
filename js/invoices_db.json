@@ -1,0 +1,32 @@
+[
+  {
+    "invoicesInformation": {
+      "invoicesNumber": "X/XX/XXXX",
+      "invoicesDateOfIssue": "XXXX-XX-XX",
+      "invoicesSaleDate": "XXXX-XX-XX",
+      "invoicesMethodOfPayment": "transfer",
+      "invoicesPaymentDeadline": "XXXX-XX-XX"
+    }
+  },
+  {
+    "invoicesNumber": "2022-12-06",
+    "invoicesDateOfIssue": "2022-12-06",
+    "invoicesSaleDate": "2022-12-06",
+    "invoicesMethodOfPayment": "transfer",
+    "invoicesPaymentDeadline": "2022-12-06"
+  },
+  {
+    "invoicesNumber": "2022-12-06",
+    "invoicesDateOfIssue": "2022-12-06",
+    "invoicesSaleDate": "2022-12-06",
+    "invoicesMethodOfPayment": "transfer",
+    "invoicesPaymentDeadline": "2022-12-06"
+  },
+  {
+    "invoicesNumber": "2022-12-06",
+    "invoicesDateOfIssue": "2022-12-06",
+    "invoicesSaleDate": "2022-12-06",
+    "invoicesMethodOfPayment": "transfer",
+    "invoicesPaymentDeadline": "2022-12-06"
+  }
+]
