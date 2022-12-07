@@ -1,11 +1,19 @@
 [
   {
+    "user": {
+      "userName": "anonymous",
+      "userEmail": "anonymous@anonymous.com",
+      "userAddress": "anonymous, anonymous 00-000",
+      "userPhone": "123-456-789",
+      "userNIP": "PL 123 456789 0",
+      "userRegon": "12 345678 9"
+    },
     "invoicesInformation": {
       "invoicesNumber": "X/XX/XXXX",
       "invoicesDateOfIssue": "XXXX-XX-XX",
       "invoicesSaleDate": "XXXX-XX-XX",
       "invoicesMethodOfPayment": "transfer",
-      "invoicesPaymentDeadline": "XXXX-XX-XX"
+      "invoicesPaymentDeadline": ""
     }
   },
   {
@@ -28,5 +36,15 @@
     "invoicesSaleDate": "2022-12-06",
     "invoicesMethodOfPayment": "transfer",
     "invoicesPaymentDeadline": "2022-12-06"
-  }
+  },
+  [
+    "invoicesNumber",
+    "invoicesDateOfIssue",
+    "invoicesSaleDate",
+    "invoicesMethodOfPayment",
+    "invoicesPaymentDeadline"
+  ],
+  {},
+  {},
+  {}
 ]
