@@ -1,0 +1,7 @@
+.container {
+  @include flex__column();
+  gap: 40px;
+  &--register {
+    margin: 100px;
+  }
+}
